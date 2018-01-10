@@ -55,7 +55,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TasMakasKagit\RockPaperScissors.csproj">
+    <ProjectReference Include="..\RockPaperScissors\RockPaperScissors.csproj">
       <Project>{1db28915-707e-4148-a742-6502c9d99220}</Project>
       <Name>RockPaperScissors</Name>
     </ProjectReference>

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1DB28915-707E-4148-A742-6502C9D99220}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TasMakasKagit</RootNamespace>
-    <AssemblyName>TasMakasKagit</AssemblyName>
+    <RootNamespace>RockPaperScissors</RootNamespace>
+    <AssemblyName>RockPaperScissors</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
