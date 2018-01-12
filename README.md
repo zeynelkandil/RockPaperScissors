@@ -8,4 +8,4 @@ The players usually count aloud to three, or speak the name of the game (e.g. "R
 
 ## About Code
 
-This is a simple C# implementation of Rock Paper Scissors game. Our motivation is improving codebase as much as possible using TDD aligned to OOP. 
+This is a simple C# implementation of Rock Paper Scissors game. Our motivation is improving code quality as much as possible using TDD aligned to OOP. 
