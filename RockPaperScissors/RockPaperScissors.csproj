@@ -72,10 +72,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\ICanBe.cs" />
     <Compile Include="Contracts\IHand.cs" />
-    <Compile Include="Contracts\IRound.cs" />
-    <Compile Include="Contracts\ICanBeat.cs" />
+    <Compile Include="Entities\ActionEnum.cs" />
+    <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\Paper.cs" />
     <Compile Include="Entities\Scissors.cs" />

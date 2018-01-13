@@ -7,15 +7,15 @@ using RockPaperScissors.Contracts;
 
 namespace RockPaperScissors.Entities
 {
-    public class Player : ICanBeat
+    public class Player
     {
-        public IHand Hand { get; set; }
-
-        public bool Beat(ICanBeat canBeat)
+        public Player(string name, IHand hand)
         {
-            if (Hand == null)
-                return false;
-            return Hand.TryBeat(canBeat.Hand);
+            Name = name;
+            Hand = hand;
         }
+
+        public string Name { get; }
+        public IHand Hand { get; }
     }
 }

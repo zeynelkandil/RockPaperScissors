@@ -1,132 +1,121 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RockPaperScissors.Entities;
 
 namespace UnitTestProject1
 {
-    /// <summary>
-    /// Summary description for UnitTest1
-    /// </summary>
     [TestClass]
     public class Player1
     {
         [TestMethod]
         public void EliTasRakipEliTasIseBerabere()
         {
-            var player1 = new Player();
-            player1.Hand = new Rock();
+            Player player1 = new Player(nameof(player1), new Rock());
+            Player player2 = new Player(nameof(player2), new Rock());
 
-            var player2 = new Player();
-            player2.Hand = new Rock();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), false);
-            Assert.AreEqual(player2.Beat(player1), false);
+            Assert.IsTrue(result.Draw);
+            Assert.IsNull(result.Winner);
         }
 
         [TestMethod]
         public void EliTasRakipEliKagitIseMalup()
         {
-            var player1 = new Player();
-            player1.Hand = new Rock();
+            Player player1 = new Player(nameof(player1), new Rock());
+            Player player2 = new Player(nameof(player2), new Paper());
 
-            var player2 = new Player();
-            player2.Hand = new Paper();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), false);
-            Assert.AreEqual(player2.Beat(player1), true);
+            Assert.AreSame(player2, result.Winner);
         }
 
         [TestMethod]
         public void EliTasRakipEliMakasIseGalip()
         {
-            var player1 = new Player();
-            player1.Hand = new Rock();
+            Player player1 = new Player(nameof(player1), new Rock());
+            Player player2 = new Player(nameof(player2), new Scissors());
 
-            var player2 = new Player();
-            player2.Hand = new Scissors();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), true);
-            Assert.AreEqual(player2.Beat(player1), false);
+            Assert.AreSame(player1, result.Winner);
         }
 
         [TestMethod]
         public void EliMakasRakipEliTasIseMalup()
         {
-            var player1 = new Player();
-            player1.Hand = new Scissors();
+            Player player1 = new Player(nameof(player1), new Scissors());
+            Player player2 = new Player(nameof(player2), new Rock());
 
-            var player2 = new Player();
-            player2.Hand = new Rock();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), false);
-            Assert.AreEqual(player2.Beat(player1), true);
+            Assert.AreSame(player2, result.Winner);
         }
 
         [TestMethod]
         public void EliMakasRakipEliKagitIseGalip()
         {
-            var player1 = new Player();
-            player1.Hand = new Scissors();
+            Player player1 = new Player(nameof(player1), new Scissors());
+            Player player2 = new Player(nameof(player2), new Paper());
 
-            var player2 = new Player();
-            player2.Hand = new Paper();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), true);
-            Assert.AreEqual(player2.Beat(player1), false);
+            Assert.AreSame(player1, result.Winner);
         }
 
         [TestMethod]
         public void EliMakasRakipEliMakasIseBerabere()
         {
-            var player1 = new Player();
-            player1.Hand = new Scissors();
+            Player player1 = new Player(nameof(player1), new Scissors());
+            Player player2 = new Player(nameof(player2), new Scissors());
 
-            var player2 = new Player();
-            player2.Hand = new Scissors();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), false);
-            Assert.AreEqual(player2.Beat(player1), false);
+            Assert.IsTrue(result.Draw);
+            Assert.IsNull(result.Winner);
         }
 
         [TestMethod]
         public void EliKagitRakipEliTasIseGalip()
         {
-            var player1 = new Player();
-            player1.Hand = new Paper();
+            Player player1 = new Player(nameof(player1), new Paper());
+            Player player2 = new Player(nameof(player2), new Rock());
 
-            var player2 = new Player();
-            player2.Hand = new Rock();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), true);
-            Assert.AreEqual(player2.Beat(player1), false);
+            Assert.AreSame(player1, result.Winner);
         }
 
         [TestMethod]
         public void EliKagitRakipEliKagitIseBerabere()
         {
-            var player1 = new Player();
-            player1.Hand = new Paper();
+            Player player1 = new Player(nameof(player1), new Paper());
+            Player player2 = new Player(nameof(player2), new Paper());
 
-            var player2 = new Player();
-            player2.Hand = new Paper();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), false);
-            Assert.AreEqual(player2.Beat(player1), false);
+            Assert.IsTrue(result.Draw);
+            Assert.IsNull(result.Winner);
+
         }
 
         [TestMethod]
         public void EliKagitRakipEliMakasIseMalup()
         {
-            var player1 = new Player();
-            player1.Hand = new Paper();
+            Player player1 = new Player(nameof(player1), new Paper());
+            Player player2 = new Player(nameof(player2), new Scissors());
 
-            var player2 = new Player();
-            player2.Hand = new Scissors();
+            var game = new Game(player1, player2);
+            var result = game.Play();
 
-            Assert.AreEqual(player1.Beat(player2), false);
-            Assert.AreEqual(player2.Beat(player1), true);
+            Assert.AreSame(player2, result.Winner);
         }
     }
 }
