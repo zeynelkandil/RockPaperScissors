@@ -4,10 +4,10 @@ using RockPaperScissors.Entities;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class Player1
+    public class when_testing_game_result
     {
         [TestMethod]
-        public void EliTasRakipEliTasIseBerabere()
+        public void rock_draws_against_rock()
         {
             Player player1 = new Player(nameof(player1), new Rock());
             Player player2 = new Player(nameof(player2), new Rock());
@@ -20,7 +20,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliTasRakipEliKagitIseMalup()
+        public void rock_loses_against_paper()
         {
             Player player1 = new Player(nameof(player1), new Rock());
             Player player2 = new Player(nameof(player2), new Paper());
@@ -32,7 +32,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliTasRakipEliMakasIseGalip()
+        public void rock_wins_against_scissors()
         {
             Player player1 = new Player(nameof(player1), new Rock());
             Player player2 = new Player(nameof(player2), new Scissors());
@@ -44,7 +44,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliMakasRakipEliTasIseMalup()
+        public void scissors_lose_against_rock()
         {
             Player player1 = new Player(nameof(player1), new Scissors());
             Player player2 = new Player(nameof(player2), new Rock());
@@ -56,7 +56,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliMakasRakipEliKagitIseGalip()
+        public void scissors_win_against_paper()
         {
             Player player1 = new Player(nameof(player1), new Scissors());
             Player player2 = new Player(nameof(player2), new Paper());
@@ -68,7 +68,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliMakasRakipEliMakasIseBerabere()
+        public void scissors_draw_against_scissors()
         {
             Player player1 = new Player(nameof(player1), new Scissors());
             Player player2 = new Player(nameof(player2), new Scissors());
@@ -81,7 +81,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliKagitRakipEliTasIseGalip()
+        public void paper_wins_against_rock()
         {
             Player player1 = new Player(nameof(player1), new Paper());
             Player player2 = new Player(nameof(player2), new Rock());
@@ -93,7 +93,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliKagitRakipEliKagitIseBerabere()
+        public void paper_draws_against_paper()
         {
             Player player1 = new Player(nameof(player1), new Paper());
             Player player2 = new Player(nameof(player2), new Paper());
@@ -107,7 +107,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void EliKagitRakipEliMakasIseMalup()
+        public void paper_loses_against_scissors()
         {
             Player player1 = new Player(nameof(player1), new Paper());
             Player player2 = new Player(nameof(player2), new Scissors());
