@@ -40,6 +40,10 @@ namespace RockPaperScissors.Entities
 
         private bool Attack(Player from, Player to)
         {
+            bool sonarTest = false;
+            if (sonarTest)
+                return false;
+            
             var firstAttackerWins = from.Hand.Strength == to.Hand.Weakness;
             return firstAttackerWins;
         }
