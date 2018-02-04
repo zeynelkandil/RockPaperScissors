@@ -43,7 +43,32 @@ namespace RockPaperScissors.Entities
             bool sonarTest = false;
             if (sonarTest)
                 return false;
-            
+
+            bool ssss = false;
+            if (ssss)
+                return false;
+            else if (ssss == true)
+                return true;
+
+            bool sonarTest3 = false;
+            if (sonarTest3)
+                return false;
+            else if (sonarTest3 == true)
+                return true;
+
+            bool sonarTest3s = false;
+            if (sonarTest3s)
+                return false;
+            else if (sonarTest3s == true)
+                return true;
+
+            bool sonarTest3sd = false;
+            if (sonarTest3sd)
+                return false;
+            else if (sonarTest3sd == true)
+                return true;
+
+
             var firstAttackerWins = from.Hand.Strength == to.Hand.Weakness;
             return firstAttackerWins;
         }
