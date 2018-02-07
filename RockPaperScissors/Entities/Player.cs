@@ -13,6 +13,9 @@ namespace RockPaperScissors.Entities
         {
             Name = name;
             Hand = hand;
+            bool oldTest = false;
+            if (oldTest)
+                hand = null;
         }
 
         public string Name { get; }
